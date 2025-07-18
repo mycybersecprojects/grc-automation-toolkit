@@ -1,0 +1,61 @@
+Phase,Task
+Phase 1 – Environment Setup,Install Python 3.11+
+Phase 1 – Environment Setup,Install VS Code and Python extension
+Phase 1 – Environment Setup,Install Git (optional but recommended)
+Phase 1 – Environment Setup,Create a virtual environment (`python -m venv venv`)
+Phase 1 – Environment Setup,Activate the environment and test `python --version`
+Phase 1 – Environment Setup,"Install dependencies: `pandas`, `openpyxl`, `streamlit`, `flask`, `jinja2`, `python-dotenv`, `fpdf`"
+Phase 1 – Environment Setup,Create initial project folder structure
+Phase 1 – Environment Setup,Add `README.md` and `LICENSE` file
+Phase 1 – Environment Setup,Initialize Git and push to GitHub
+Phase 1 – Environment Setup,Create `.gitignore` and `requirements.txt`
+Phase 2 – Framework & Control Loader,Download NIST 800-53 control list (CSV or JSON)
+Phase 2 – Framework & Control Loader,Write `load_nist.py` to parse control data
+Phase 2 – Framework & Control Loader,Create `controls.db` SQLite database
+Phase 2 – Framework & Control Loader,"Define table schema for controls (id, framework, title, description, family)"
+Phase 2 – Framework & Control Loader,Write CSV-to-DB import logic
+Phase 2 – Framework & Control Loader,Add control filtering or basic viewer
+Phase 2 – Framework & Control Loader,Prepare sample ISO 27001 control input
+Phase 2 – Framework & Control Loader,Create `load_iso.py` loader script
+Phase 2 – Framework & Control Loader,Build framework-agnostic loader structure
+Phase 2 – Framework & Control Loader,Test loader with sample files and log result summary
+Phase 3 – Evidence Collector,Create `/evidence` directory with subfolders per control
+Phase 3 – Evidence Collector,"Build CLI or Streamlit uploader for screenshots, configs, PDFs"
+Phase 3 – Evidence Collector,Associate uploaded files with a control ID
+Phase 3 – Evidence Collector,"Store file metadata (timestamp, uploader, notes)"
+Phase 3 – Evidence Collector,Log evidence in a new DB table: `evidence`
+Phase 3 – Evidence Collector,Add duplicate prevention or file name standardization
+Phase 3 – Evidence Collector,Support bulk upload (drag and drop or folder select)
+Phase 3 – Evidence Collector,Test with sample evidence files
+Phase 4 – Compliance Dashboard,Create basic Streamlit or Flask dashboard layout
+Phase 4 – Compliance Dashboard,Connect dashboard to `controls.db` and `evidence` data
+Phase 4 – Compliance Dashboard,Display % of controls with at least one evidence file
+Phase 4 – Compliance Dashboard,"Filter controls by framework, family, owner, evidence status"
+Phase 4 – Compliance Dashboard,Add bar/line/heatmap charts using Plotly or Matplotlib
+Phase 4 – Compliance Dashboard,List top missing or overdue controls
+Phase 4 – Compliance Dashboard,Test dashboard with mock control and evidence data
+Phase 5 – Alerting & Reporting,Write script to detect stale or missing evidence
+Phase 5 – Alerting & Reporting,Send email alerts using `smtplib` or `yagmail`
+Phase 5 – Alerting & Reporting,Create a cron-compatible script for daily/weekly reminders
+Phase 5 – Alerting & Reporting,"Build PDF report generator (e.g., `fpdf` or `reportlab`)"
+Phase 5 – Alerting & Reporting,Generate Excel reports using `pandas` or `openpyxl`
+Phase 5 – Alerting & Reporting,"Include control summaries, last update, owner"
+Phase 5 – Alerting & Reporting,Export logs of control reviews and evidence submissions
+Phase 6 – Role-Based Access Control (Optional),Create user login (local accounts or `users.db`)
+Phase 6 – Role-Based Access Control (Optional),"Define roles: Admin, Auditor, Engineer"
+Phase 6 – Role-Based Access Control (Optional),Secure file access and evidence viewer by role
+Phase 6 – Role-Based Access Control (Optional),Build a login form in Streamlit or Flask
+Phase 6 – Role-Based Access Control (Optional),"Log user activity (view, upload, modify)"
+Phase 6 – Role-Based Access Control (Optional),Add password hashing and .env protection
+Phase 7 – Packaging & Deployment,Write `setup.py` or `pyproject.toml`
+Phase 7 – Packaging & Deployment,Create a Dockerfile for container deployment
+Phase 7 – Packaging & Deployment,Write `run.sh` or `run.bat` scripts for local use
+Phase 7 – Packaging & Deployment,Prepare README usage examples and screenshots
+Phase 7 – Packaging & Deployment,Test end-to-end flow in a clean virtual machine or cloud VM
+Phase 8 – Blog & Documentation,Write blog post for Phase 1 (Project setup)
+Phase 8 – Blog & Documentation,Write blog post for Phase 2 (Loading NIST/ISO)
+Phase 8 – Blog & Documentation,Write blog post for Evidence Collection logic
+Phase 8 – Blog & Documentation,Write blog post for Dashboard features
+Phase 8 – Blog & Documentation,Add usage GIFs or screen recordings
+Phase 8 – Blog & Documentation,Write blog post about deployment options
+Phase 8 – Blog & Documentation,Post highlights on LinkedIn with project repo link
